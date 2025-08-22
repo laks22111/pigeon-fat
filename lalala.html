@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>pigeon dvd</title>
+<style>
+body{
+margin:0;
+overflow:hidden;
+background:black;
+}
+#pigeon{
+position:absolute;
+width:250px;
+}
+</style>
+</head>
+<body>
+<img id="pigeon" src="./ilovepigeonssomuch.png" alt="pigeon" width="350px";>
+
+<script>
+const pigeon = document.getElementById('pigeon');
+let x = 100;
+let y = 100;
+let dx = 4; 
+let dy = 3; 
+
+function move() {
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
+
+const pigeonWidth = pigeon.offsetWidth;
+const pigeonHeight = pigeon.offsetHeight;
+
+
+if (x + dx > screenWidth - pigeonWidth || x + dx < 0) {
+dx *= -1;
+}
+if (y + dy > screenHeight - pigeonHeight || y + dy < 0) {
+dy *= -1;
+}
+
+x += dx;
+y += dy;
+
+pigeon.style.left = x + 'px';
+pigeon.style.top = y + 'px';
+
+requestAnimationFrame(move);
+}
+
+move();
+
+</script>
+</body>
+</html>
