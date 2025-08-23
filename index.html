@@ -9,14 +9,37 @@ margin:0;
 overflow:hidden;
 background:black;
 }
+  
 #pigeon{
 position:absolute;
 width:250px;
+cursor:pointer;
 }
+
+#pj{
+  display:none;
+  text-align:center;
+  padding-top:50px;
+}
+
+#pj{
+  opacity:1;
+  transition:opacity 5s ease-out;
+}
+#pj.fadeout img{
+  opacity: 0;
+}
+  
 </style>
 </head>
 <body>
-<img id="pigeon" src="./ilovepigeonssomuch.png" alt="pigeon" width="350px";>
+<div id="pigeon">
+  <img id="pigeon" src="./ilovepigeonssomuch.png" alt="pigeon" width="350px";>
+</div>
+
+<div id="pj">
+  <img id="pj" src="./pigeonscare.png" width="max";
+</div>
 
 <script>
 const pigeon = document.getElementById('pigeon');
@@ -54,3 +77,4 @@ move();
 </script>
 </body>
 </html>
+
